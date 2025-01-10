@@ -34,17 +34,26 @@ const AddTask = ({ closeModal }) => {
       try {
         const formData = new FormData();
         formData.append("file", file);
-        formData.append("upload_preset", "your_upload_preset"); // Replace with your Cloudinary preset
+        formData.append("upload_preset", "mitm87x0");
 
         const response = await axios.post(
-          `https://api.cloudinary.com/v1_1/your_cloud_name/image/upload`, // Replace with your Cloudinary endpoint
-          formData
+          "https://api.cloudinary.com/v1_1/dcnblai32/image/upload",
+          formData,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          }
         );
 
         fileUrl = response.data.secure_url;
       } catch (error) {
-        console.error("File upload failed:", error);
-        alert("File upload failed. Please try again.");
+        console.error("File upload failed:", error.response || error.message);
+        alert(
+          `File upload failed. ${
+            error.response?.data?.error?.message || error.message
+          }`
+        );
         setUploading(false);
         return;
       }
@@ -60,10 +69,17 @@ const AddTask = ({ closeModal }) => {
       attachment: fileUrl,
     };
 
-    dispatch(addTask(newTask));
-    setUploading(false);
-    closeModal();
-    resetForm();
+    try {
+      dispatch(addTask(newTask));
+      alert("Task added successfully!");
+      resetForm();
+      closeModal();
+    } catch (error) {
+      console.error("Task creation failed:", error.message);
+      alert("Failed to add task. Please try again.");
+    } finally {
+      setUploading(false);
+    }
   };
 
   const resetForm = () => {
