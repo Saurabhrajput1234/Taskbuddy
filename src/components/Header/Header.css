@@ -1,0 +1,122 @@
+
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 2rem;
+  cursor: pointer;
+  color: #333;
+  margin-bottom: 56px;
+}
+
+.header-title:hover {
+  color: #007bff;
+}
+
+.header-nav {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  bottom: 44px;
+}
+
+
+
+.header-right {
+
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 8px;
+  margin-right: 6px;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #555;
+  cursor: pointer;
+  padding: 9px 7px;
+  margin: 0px 4px;
+  position: relative;
+}
+
+.nav-button img {
+  margin-right: 5px;
+  position: relative;
+  bottom: -2px;
+  height: 18px;
+}
+
+.nav-button:hover {
+  color: black; 
+}
+
+
+.nav-button.active {
+  color: black; 
+  font-weight: bold;
+}
+
+.nav-button.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: black; 
+}
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+}
+
+.user-name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.logout-button,
+.login-button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border: 1px solid #7B198426;
+  border-radius: 12px;
+  cursor: pointer;
+  color:black;
+  display: flex;
+  justify-content: space-between;
+  width: 109px;
+  background: #FFF9F9;
+
+}
+
+
+.logout-button:hover {
+  border-color: #646cff;
+}
+.logout-button:focus,
+.logout-button:focus-visible {
+  border-bottom: 1px solid black;
+}
+
+.logout-button:hover,
+.login-button:hover {
+ color: blue;
+ border-color: #646cff;
+}

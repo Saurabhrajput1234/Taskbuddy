@@ -1,0 +1,39 @@
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.task-actions button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.task-actions button:nth-child(1) {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.task-actions button:nth-child(1):hover {
+  background-color: #e0a800;
+}
+
+.task-actions button:nth-child(2) {
+  background-color: #d9534f;
+  color: #fff;
+}
+
+.task-actions button:nth-child(2):hover {
+  background-color: #c9302c;
+}
+
+.task-actions button:nth-child(3) {
+  background-color: #5cb85c;
+  color: #fff;
+}
+
+.task-actions button:nth-child(3):hover {
+  background-color: #449d44;
+}

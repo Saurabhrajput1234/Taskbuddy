@@ -1,0 +1,37 @@
+.task-filter {
+  display: flex;
+  justify-content: space-between;
+  width: 87vw;
+}
+
+.task-filter select,
+.task-filter input {
+  top: 152px;
+  left: 995px;
+  padding: 6px 7px 6px 7px;
+  gap: 4px;
+  border-radius: 60px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  width: 232px;
+  height: 34px;
+  margin-top: 7px;
+  margin-inline-start: 17px;
+  
+}
+.task-filter select{
+  padding: 6px 7px 6px 7px;
+  border-radius: 60px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  
+}
+
+
+
+@media (max-width: 768px) {
+  .task-filter {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

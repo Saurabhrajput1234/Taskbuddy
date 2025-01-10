@@ -1,0 +1,34 @@
+.activity-log {
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.activity-log ul {
+  list-style: none;
+  padding: 0;
+}
+
+.activity-log li {
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+}
+
+.activity-log li:last-child {
+  border-bottom: none;
+}
+
+.activity-log time {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .activity-log {
+    font-size: 0.8rem;
+  }
+}

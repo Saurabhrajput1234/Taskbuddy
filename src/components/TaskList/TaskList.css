@@ -1,0 +1,38 @@
+.task-list {
+  display: flex;
+  flex-direction: column;
+  height: 47px;
+}
+
+.task-list .task-section {
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  background-color: #F1F1F1;
+}
+
+.task-list .task-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.task-group{
+  border-radius: 17px;
+  margin-bottom: 46px;
+  padding: 0px;
+  overflow: hidden;
+  min-height: 296px;
+  background-color: #F1F1F1;
+
+}
+.group-heading{
+  background: #FAC3FF;
+  padding-inline: 23px;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .task-list {
+    padding: 0.5rem;
+  }
+}

@@ -1,0 +1,148 @@
+/* AddTask.css */
+.add-task {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.add-task h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.add-task-input,
+.add-task-textarea,
+.add-task-select,
+.add-task-date {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.add-task-input:focus,
+.add-task-textarea:focus,
+.add-task-select:focus,
+.add-task-date:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.add-task-textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.add-task-meta {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.add-task-meta select,
+.add-task-meta input {
+  width: 48%;
+}
+
+.add-task-meta select {
+  margin-bottom: 12px;
+}
+
+.attachment {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.file-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.add-task-button,
+.cancel-task-button {
+  width: 400px ;
+  padding: 14px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-task-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.add-task-button:hover {
+  background-color: #218838;
+}
+
+.add-task-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.cancel-task-button {
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.cancel-task-button:hover {
+  background-color: #e2e6ea;
+}
+
+@media (max-width: 768px) {
+  .add-task {
+    width: 90%;
+  }
+
+  .add-task h2 {
+    font-size: 1.5rem;
+  }
+
+  .add-task-meta select,
+  .add-task-meta input {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .file-input {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-task h2 {
+    font-size: 1.3rem;
+  }
+
+  .add-task-input,
+  .add-task-textarea,
+  .add-task-select,
+  .add-task-date,
+  .file-input {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .add-task-button,
+  .cancel-task-button {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+}

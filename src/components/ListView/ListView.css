@@ -1,0 +1,27 @@
+.list-view {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.list-view th,
+.list-view td {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.list-view th {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .list-view {
+    font-size: 12px;
+  }
+
+  .list-view th,
+  .list-view td {
+    padding: 0.5rem;
+  }
+}
