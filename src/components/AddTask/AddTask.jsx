@@ -34,11 +34,10 @@ const AddTask = ({ closeModal }) => {
       try {
         const formData = new FormData();
         formData.append("file", file);
-        formData.append("upload_preset", "mitm87x0");
+        formData.append("upload_preset", "your_upload_preset"); // Replace with your Cloudinary preset
 
-        // Upload file to Cloudinary
         const response = await axios.post(
-          `https://api.cloudinary.com/v1_1/dcnblai32/image/upload`,
+          `https://api.cloudinary.com/v1_1/your_cloud_name/image/upload`, // Replace with your Cloudinary endpoint
           formData
         );
 
@@ -78,54 +77,84 @@ const AddTask = ({ closeModal }) => {
 
   return (
     <div className="add-task">
-      <h2>Create Task</h2>
-      <input
-        type="text"
-        placeholder="Enter Task Title"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-        className="add-task-input"
-      />
-      <textarea
-        placeholder="Enter Task Description (Optional)"
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-        className="add-task-textarea"
-      />
-      <div className="task-meta">
-        <select value={category} onChange={(e) => setCategory(e.target.value)}>
-          <option value="Work">Work</option>
-          <option value="Personal">Personal</option>
-        </select>
-        <input
-          type="date"
-          value={dueDate}
-          onChange={(e) => setDueDate(e.target.value)}
-        />
-        <select value={status} onChange={(e) => setStatus(e.target.value)}>
-          <option value="">Choose Status</option>
-          <option value="Pending">Pending</option>
-          <option value="In Progress">In Progress</option>
-          <option value="Completed">Completed</option>
-        </select>
+      <div className="modal-header">
+        <h2>Create Task</h2>
+        <button className="close-modal" onClick={closeModal}>
+          &times;
+        </button>
       </div>
-      <div className="attachment">
-        <input
-          type="file"
-          onChange={(e) => setFile(e.target.files[0])}
-          className="file-input"
-        />
+      <div className="form-inputs" style={{ padding: "15px" }}>
+        <div className="form-groupa">
+          <input
+            type="text"
+            placeholder="Task title"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            className="form-input"
+          />
+          <textarea
+            placeholder="Description"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            className="form-textarea"
+          />
+        </div>
+        <div className="form-groupb">
+          <div className="btn-group">
+            <button
+              className={category === "Work" ? "btn active" : "btn"}
+              onClick={() => setCategory("Work")}
+            >
+              Work
+            </button>
+            <button
+              className={category === "Personal" ? "btn active" : "btn"}
+              onClick={() => setCategory("Personal")}
+            >
+              Personal
+            </button>
+          </div>
+          <input
+            type="date"
+            value={dueDate}
+            onChange={(e) => setDueDate(e.target.value)}
+            className="form-input date-input"
+          />
+          <select
+            value={status}
+            onChange={(e) => setStatus(e.target.value)}
+            className="form-select"
+          >
+            <option value="">Choose</option>
+            <option value="Pending">Pending</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+          </select>
+        </div>
+        <div className="form-group attachment-group">
+          <label>Attachment</label>
+          <div className="attachment-input">
+            <input
+              type="file"
+              id="file-upload"
+              onChange={(e) => setFile(e.target.files[0])}
+              className="file-input"
+            />
+          </div>
+        </div>
       </div>
-      <button
-        onClick={handleAddTask}
-        className="add-task-button"
-        disabled={uploading}
-      >
-        {uploading ? "Uploading..." : "Add Task"}
-      </button>
-      <button onClick={closeModal} className="cancel-task-button">
-        Cancel
-      </button>
+      <div className="form-footer">
+        <button onClick={closeModal} className="form-btn cancel-btn">
+          Cancel
+        </button>
+        <button
+          onClick={handleAddTask}
+          className="form-btn create-btn"
+          disabled={uploading}
+        >
+          {uploading ? "Uploading..." : "Create"}
+        </button>
+      </div>
     </div>
   );
 };

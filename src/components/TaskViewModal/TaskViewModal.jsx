@@ -64,13 +64,14 @@ const TaskViewModal = ({ task, isOpen, onClose, onUpdate }) => {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               placeholder="Task Title"
-              className="task-title-input"
+              className="form-input"
             />
             <textarea
+          
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               placeholder="Description"
-              className="task-description"
+              className="form-textarea"
             />
             <div className="task-category">
               <button
@@ -95,13 +96,14 @@ const TaskViewModal = ({ task, isOpen, onClose, onUpdate }) => {
                 <label>Due on*</label>
                 <input
                   type="date"
+                  className="form-input"
                   value={dueDate}
                   onChange={(e) => setDueDate(e.target.value)}
                 />
               </div>
               <div className="task-status">
                 <label>Task Status*</label>
-                <select
+                <select className="form-select"
                   value={status}
                   onChange={(e) => setStatus(e.target.value)}
                 >
@@ -115,7 +117,7 @@ const TaskViewModal = ({ task, isOpen, onClose, onUpdate }) => {
               <label>Attachment</label>
               <input
                 type="file"
-                id="attachment"
+                className="file-input"
                 onChange={(e) =>
                   setAttachment(URL.createObjectURL(e.target.files[0]))
                 }
