@@ -1,4 +1,3 @@
-/* LoginPage.css */
 
 .login-page {
   display: flex;
@@ -63,10 +62,8 @@
 
 .google-login-button img {
   width: 20px;
-  /* Adjust the size of the logo */
   height: 20px;
   margin-right: 10px;
-  /* Space between the logo and the text */
 }
 
 .google-login-button:active {
@@ -74,7 +71,6 @@
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive for screens smaller than 1024px (laptops and tablets) */
 @media (max-width: 1024px) {
   .login-page {
     flex-direction: column;
@@ -105,7 +101,6 @@
   }
 }
 
-/* Responsive for mobile screens (smaller than 768px) */
 @media (max-width: 768px) {
   .login-page {
     flex-direction: column;

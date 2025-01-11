@@ -1,4 +1,3 @@
-/* Home Page Container */
 .home-page {
   padding: 2rem;
   background: #FFFFFF;
@@ -7,18 +6,17 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  /* width: 100vw; */
+
 }
 
-/* Header Section */
 .home-page header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* border-bottom: 1px solid #ddd; */
+
 }
 
-/* Add Task Button */
+
 .add-task-button {
   padding: 13px 33px;
   background: #7B1984;
@@ -36,13 +34,12 @@
   background-color: #0056b3;
 }
 
-/* Tasks Container */
+
 .home-page .tasks-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
-/* Task Card Styles */
 .home-page .tasks-container .task {
   background-color: #fff;
   border-radius: 8px;
@@ -65,20 +62,19 @@
   color: #555;
 }
 
-/* Task Section Titles */
 .task-section h2 {
   font-size: 1.5rem;
   color: #333;
   margin-bottom: 1rem;
 }
 
-/* Modal Styles */
+
 .modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
@@ -86,9 +82,10 @@
   z-index: 1000;
 }
 
-.Header-box { 
+.Header-box {
   display: flex;
 }
+
 .modal-content {
   background: white;
   position: relative;
@@ -123,7 +120,7 @@
   padding-block: 8px;
 }
 
-.Header-box { 
+.Header-box {
   display: flex;
   margin-bottom: 23px;
 }
@@ -135,16 +132,13 @@
   .column-name {
     flex-direction: column;
     display: none;
-    /* Stacks the columns vertically on small screens */
   }
 
   .column-name h3 {
     text-align: left;
-    /* Align text to left when stacked */
   }
 }
 
-/* Responsive Layout */
 @media (max-width: 768px) {
   .home-page .tasks-container {
     grid-template-columns: 1fr;
@@ -159,11 +153,10 @@
     align-self: flex-start;
     padding: 10px 2px;
     margin-inline-start: 4px;
-    width:181px;
+    width: 181px;
   }
 }
 
-/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -180,8 +173,10 @@
   .column-name {
     flex-direction: column;
     display: none;
-    .Header-box { 
+
+    .Header-box {
       margin-bottom: 23px;
     }
-    
-  }}
+
+  }
+}
