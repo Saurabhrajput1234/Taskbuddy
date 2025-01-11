@@ -61,7 +61,7 @@ const HomePage = () => {
   return (
     <div className="home-page">
       <Header setView={setView} />
-      <div className="header-box" style={{ display: "flex" }}>
+      <div className="Header-box" >
         <TaskFilter onFilterChange={setFilters} />
         <button className="add-task-button" onClick={handleOpenModal}>
           Add Task

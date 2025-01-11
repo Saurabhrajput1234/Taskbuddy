@@ -86,6 +86,9 @@
   z-index: 1000;
 }
 
+.Header-box { 
+  display: flex;
+}
 .modal-content {
   background: white;
   position: relative;
@@ -120,12 +123,18 @@
   padding-block: 8px;
 }
 
+.Header-box { 
+  display: flex;
+  margin-bottom: 23px;
+}
+
 
 
 
 @media (max-width: 768px) {
   .column-name {
     flex-direction: column;
+    display: none;
     /* Stacks the columns vertically on small screens */
   }
 
@@ -142,12 +151,15 @@
   }
 
   .home-page header {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
   }
 
   .add-task-button {
     align-self: flex-start;
+    padding: 10px 2px;
+    margin-inline-start: 4px;
+    width:181px;
   }
 }
 
@@ -163,3 +175,13 @@
     transform: scale(1);
   }
 }
+
+@media (max-width: 500px) {
+  .column-name {
+    flex-direction: column;
+    display: none;
+    .Header-box { 
+      margin-bottom: 23px;
+    }
+    
+  }}

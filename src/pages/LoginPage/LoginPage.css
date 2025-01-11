@@ -162,7 +162,6 @@
   .login-box {
 
     flex-direction: column;
-    padding: 22px;
     height: 28vh;
     display: flex;
     justify-content: center;
