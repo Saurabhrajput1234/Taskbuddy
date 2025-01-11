@@ -117,7 +117,7 @@
 @media (max-width: 768px) {
   .add-task {
     width: 90%;
-    padding: 15px;
+    padding: 0;
   }
 }
 
@@ -126,7 +126,13 @@
     font-size: 1.2rem;
   }
 
+  .add-task {
+    width: 90%;
+    padding: 0;
+  }
+
   .add-task-button {
+
     align-self: flex-start;
     padding: 10px 1px;
     margin-inline-start: -39px;
