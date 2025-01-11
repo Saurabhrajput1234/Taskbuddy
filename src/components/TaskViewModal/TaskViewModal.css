@@ -13,7 +13,6 @@
 
 .modal-container {
   position: relative;
-  /* Ensure the close button is positioned relative to the modal container */
   background: white;
   width: 90%;
   max-width: 900px;
@@ -249,4 +248,19 @@
   .modal-container {
     width: 80%;
   }
+}
+
+@media (max-width: 480px) {
+
+  .sub-model-container {
+    display: inline;
+  }
+
+  .modal-left {
+    width: 100%;
+  }
+  .modal-right {
+    width: 100%;
+  }
+  
 }
