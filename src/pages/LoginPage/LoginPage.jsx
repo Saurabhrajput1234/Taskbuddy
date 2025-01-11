@@ -43,7 +43,7 @@ const LoginPage = () => {
 }}>TaskBuddy</h2>
     </div>
       
-      <p style={{color:"#000000" ,fontSize:"12px",marginTop:"16px",    marginInlineEnd: '108px'}}>Streamline your workflow and track progress effortlessly with our all-in-one task management app.</p>
+      <p className="text-login">Streamline your workflow and track progress effortlessly with our all-in-one task management app.</p>
       <button className="google-login-button" onClick={handleLogin}>
       <img id="googlelogo" src={GoogleSvg} alt="Google" />
         Continue with Google

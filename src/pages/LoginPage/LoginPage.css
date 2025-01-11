@@ -12,43 +12,32 @@
   background: #FFF9F9;
   max-height: 100vh;
   padding: 31px;
-
-
 }
 
-
-/* 
-.login-page h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 1.5rem;
-  text-align: center;
-} */
-
-
-
-
-
-.login-back{
+.login-back {
   background-image: url(../../assets/circles_bg.svg);
   height: 720px;
   width: 624px;
 }
-#TaskView{
+
+#TaskView {
   height: 655px;
   margin-inline-start: 183px;
   margin-top: 46px;
 }
 
-
-
-.login-box{
-  width: 614px;;
+.login-box {
+  width: 614px;
   padding-inline-end: 187px;
 }
-/* #googlelogo{
-  height: 23px;
-} */
+
+.text-login {
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+  margin-top: 16px;
+  margin-inline-end: 108px;
+
+}
 
 .google-login-button {
   display: flex;
@@ -73,9 +62,11 @@
 }
 
 .google-login-button img {
-  width: 20px; /* Adjust the size of the logo */
+  width: 20px;
+  /* Adjust the size of the logo */
   height: 20px;
-  margin-right: 10px; /* Space between the logo and the text */
+  margin-right: 10px;
+  /* Space between the logo and the text */
 }
 
 .google-login-button:active {
@@ -83,14 +74,115 @@
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
-@media (max-width: 768px) {
-  .login-page h2 {
-    font-size: 1.5rem;
+/* Responsive for screens smaller than 1024px (laptops and tablets) */
+@media (max-width: 1024px) {
+  .login-page {
+    flex-direction: column;
+    padding: 20px;
   }
 
-  .login-page button {
-    font-size: 0.9rem;
-    padding: 0.7rem 1.2rem;
+  .login-back {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #TaskView {
+    height: auto;
+    margin-inline-start: 0;
+    margin-top: 20px;
+  }
+
+  .login-box {
+    width: 90%;
+    padding-inline-end: 0;
+  }
+
+  .google-login-button {
+    width: 250px;
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}
+
+/* Responsive for mobile screens (smaller than 768px) */
+@media (max-width: 768px) {
+  .login-page {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .login-back {
+    height: 300px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #TaskView {
+    height: auto;
+    display: none;
+    margin-inline-start: 0;
+    margin-top: 20px;
+  }
+
+  .login-box {
+    width: 100%;
+    padding-inline-end: 0;
+  }
+
+  .google-login-button {
+    width: 200px;
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 468px) {
+  .login-page {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .login-back {
+    height: 256px;
+    width: 87vw;
+    margin-bottom: 72px;
+    background-size: 273px;
+    background-repeat: no-repeat;
+    margin-inline-start: 68px;
+  }
+
+  #TaskView {
+    height: auto;
+    display: none;
+    margin-inline-start: 0;
+    margin-top: 20px;
+  }
+
+  .login-box {
+
+    flex-direction: column;
+    padding: 22px;
+    height: 28vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .text-login {
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    margin-top: 29px;
+    margin-inline-end: 12px;
+    margin-top: 6px;
+    padding-inline: 28px;
+
+  }
+
+  .google-login-button {
+    width: 200px;
+    font-size: 12px;
+    padding: 8px 12px;
   }
 }
