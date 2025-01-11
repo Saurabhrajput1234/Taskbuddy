@@ -31,13 +31,13 @@ const TaskItem = ({ task }) => {
           <div className="task-column">
             <p>{task.title}</p>
           </div>
-          <div className="task-column">
+          <div className="task-column info-hide">
             <p>{task.dueDate}</p>
           </div>
-          <div className="task-column">
+          <div className="task-column info-hide">
             <p> {task.status}</p>
           </div>
-          <div className="task-column">
+          <div className="task-column info-hide">
             <p> {task.category}</p> 
           </div>
         </div>

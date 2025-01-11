@@ -148,6 +148,11 @@
     flex-direction: row;
     align-items: flex-start;
   }
+  .column-name {
+    
+      gap: 71px;
+    
+  }
 
   .add-task-button {
     align-self: flex-start;
@@ -162,6 +167,8 @@
   .column-name {
     flex-direction: column;
     display: none;
+      gap: 71px;
+    
   }
     .Header-box {
       margin-bottom: 23px;

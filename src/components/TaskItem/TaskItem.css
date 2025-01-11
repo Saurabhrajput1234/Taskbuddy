@@ -53,11 +53,20 @@
 }
 
 @media (max-width: 768px) {
-  .task-columns {
-    grid-template-columns: 1fr; 
-  }
+  
 
   .task-column {
     margin-bottom: 10px;
   }
+
+
 }
+
+@media (max-width:480px)
+{
+  .info-hide{
+    display:none;
+  }
+  
+}
+
