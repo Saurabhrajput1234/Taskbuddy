@@ -11,8 +11,8 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <input
-      type="text"
+    <input 
+      type="text" 
       value={query}
       onChange={handleSearch}
       placeholder="Search tasks..."
